@@ -1,0 +1,117 @@
+/* General Styling */
+* {}
+
+.body {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    height: 800px;
+}
+
+.header {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+
+.title {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    /* font-size: 100px; */
+    height: 60%;
+}
+
+.subtitle {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    /* font-size: 40px; */
+    height: 40%;
+}
+
+.main {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    height: 70%;
+
+}
+
+.container-summary {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.summary {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    width: 25%;
+}
+
+.summary-picture {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    width: 65%;
+}
+
+.container-music {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.card {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.decade {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+}
+
+.decade-button {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.card-picture {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    width: 65%;
+}
