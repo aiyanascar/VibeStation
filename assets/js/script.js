@@ -1,20 +1,4 @@
-const songs = [
-  {
-    name: "Even Flow",
-    genre: "Rock",
-    album: "Ten",
-    arist: "Pearl Jam",
-    year: "1991",
-  },
 
-  {
-    name: "Marooned",
-    genre: "Rock",
-    album: "Division Bell",
-    arist: "Pink Floyd",
-    year: "1994",
-  },
-];
 
 const songFacts = [
   {
@@ -34,6 +18,11 @@ const songFacts = [
 
   {
     fact: "'Big Poppa' was seen as being one of Biggie Smalls biggest songs, he said in an interview that this song reflected his struggles obtaining money to leave the hood scene behind and to him what it means to be truly successful.",
+    decade: "1990's",
+  },
+
+  {
+    fact: "Nu metal became popular in the late 1990s, with bands and artists such as Korn, Limp Bizkit, and Slipknot all releasing albums that sold millions of copies.",
     decade: "1990's",
   },
 
@@ -82,8 +71,23 @@ const songFacts = [
     decade: "2010's",
   },
 
+ {
+    fact: "Everything about the pop genre changed when Taylor Swift came sniffing around in 2014, by the time she’d conceptualized the ’80s revisionist theme of 1989, there was already a working retro-themed pop apparatus in place spawning real hits.",
+    decade: "2010's",
+  },
+
   {
     fact: "Pop-stars ruled the radio stations, focusing their lyrics on drunken nights out with friends, the highlights of love and vengeful heartbreak.",
+    decade: "2010's",
+  },
+
+  {
+    fact: "Mainstream rock since the early 2010s had become softer and more refined because of indie rock. Rock was reportedly still the most widely consumed genre in the United States during 2014 and 2015.",
+    decade: "2010's",
+  },
+
+  {
+    fact: "The decade saw Foo Fighters win the Grammy Award for Best Rock Album a record-breaking three times; in 2001, 2004, and 2008.",
     decade: "2010's",
   },
 
@@ -99,36 +103,8 @@ const songFacts = [
 
   {
     fact: "",
-    decade: "2020's",
+    decade: "0's",
   },
 
-  {
-    fact: "",
-    decade: "2000's",
-  },
 
-  {
-    fact: "",
-    decade: "2000's",
-  },
-
-  {
-    fact: "",
-    decade: "2000's",
-  },
-
-  {
-    fact: "  ",
-    decade: "2000's",
-  },
-
-  {
-    fact: "  ",
-    decade: "2000's",
-  },
-
-  {
-    fact: "  ",
-    decade: "2000's",
-  },
-];
+]
