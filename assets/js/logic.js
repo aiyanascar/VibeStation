@@ -48,3 +48,5 @@ async function searchArtist(searchTerm) {
 }
 
 searchBtn.onclick = handleSubmit;
+
+//Updated 
