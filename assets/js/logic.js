@@ -2,7 +2,7 @@
 
 const clientId = "13922984c05d4d3aba77b5c043f3b460";
 const clientSecret = "e6837284fb2944db9cae4225ddde1b2f";
-let token = "?";
+let token = "";
 const searchEl = document.querySelector("#search");
 const searchBtn = document.querySelector("#search-btn");
 
