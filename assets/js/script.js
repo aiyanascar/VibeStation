@@ -122,10 +122,5 @@ const songFacts = [
     genre: "Country"
   },
 
-  {
-    fact: "",
-    decade: "0's",
-  },
-
 
 ]
