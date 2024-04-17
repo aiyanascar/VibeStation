@@ -324,9 +324,3 @@ const songs = [
     arist: "Kali Uchis",
     year: "2023" },
 ]
-
-
-const songFacts = {
-    fact: "",
-    decade: "",
-}
