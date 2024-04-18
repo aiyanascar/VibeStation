@@ -59,9 +59,9 @@ body {
 }
 
 .song-cover img {
-    max-width: 100%;
+    max-width: 300px;
     height: auto;
-    max-height: 100%; /* Fill the available vertical space */
+    max-height: 300px; /* Fill the available vertical space */
     border-radius: 5px;
 }
 
@@ -75,6 +75,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-align: center;
 }
 
 .more-songs-btn:hover {
@@ -84,5 +85,3 @@ body {
 }
 
 
-  
-  

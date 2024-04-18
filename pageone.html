@@ -15,16 +15,19 @@
         <div class="container">
             <div id="song-info" class="song-info">
                 <!-- Display generated song, artist info, and decade fun fact here -->
-                <h2>Song Title</h2>
+                <h2 id="song-title"></h2>
                 <div class="song-cover">
-                    <img src="song-cover-placeholder.jpg" alt="Song Cover" id="song-cover">
+                    <img src="https://media.istockphoto.com/id/1409329028/vector/no-picture-available-placeholder-thumbnail-icon-illustration-design.jpg?s=612x612&w=0&k=20&c=_zOuJu755g2eEUioiOUdz_mHKJQJn-tDgIAhQzyeKUQ=" alt="Song Cover" id="song-cover">
                 </div>
-                <p>Artist: Artist Name</p>
-                <p id="funFactP">Fun Fact: Fun Fact about the Decade</p>
+                <p id="genreInfo"></p>
+                <p id="artistName"></p>
+                <p id="artistAlbum"></p>
+                <p id="yearReleased"></p>
+                <p id="funFactP"></p>
             </div>
-            <button id="more-songs-btn" class="more-songs-btn">more songs like this</button>
+            <a class="more-songs-btn" href="/list.html">more songs like this</a>
+            <a href="/landing2.html">Go back</a>
         </div>
     </div>
-    <script type="module" src="/assets/js/songFacts.js"></script>
-</body>
-</html>
+    <script type="module" src="/assets/js/songGenerator.js"></script>
+</body></html>
