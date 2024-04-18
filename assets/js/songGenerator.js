@@ -2,7 +2,7 @@ import { songs } from "./songlist.js";
 import { songFacts } from "./songFacts.js";
 
 const funFactParagraph = document.getElementById(`funFactP`);
-const songCover = document.getElementById(`song-cover`);
+const songCover = document.getElementById(`album-cover`);
 const artistName = document.getElementById("artistName");
 const songTitle = document.getElementById("song-title");
 const artistAlbum = document.getElementById("artistAlbum");
