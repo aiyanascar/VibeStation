@@ -108,3 +108,6 @@ const songFacts = [
 
 
 ]
+
+
+export {songFacts };
