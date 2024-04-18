@@ -122,3 +122,5 @@ const songFacts = [
 
 
 ];
+
+export { songFacts }
