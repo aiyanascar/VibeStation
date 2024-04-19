@@ -9,6 +9,12 @@ const artistAlbum = document.getElementById("artistAlbum");
 const yearReleased = document.getElementById("yearReleased");
 const genreInfo = document.getElementById("genreInfo");
 
+// Define the setGenreSession function
+function setGenreSession(genre) {
+  sessionStorage.setItem("selectedGenre", genre);
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // Get all genre buttons
   var genreButtons = document.querySelectorAll(".genre-button");
@@ -16,31 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add click event listener to each genre button
   genreButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-      // Determine the genre based on the ID of the button clicked
       var genre = this.dataset.genre;
-
-      // Call setGenreCookie function with the determined genre value
-      setGenreCookie(genre);
+      console.log("Selected Genre:", genre); // Check if genre value is correct
+      setGenreSession(genre);
     });
   });
 });
-
-function setGenreCookie(genre) {
-  document.cookie = `selectedGenre=${genre};  path=/`;
-}
-
-function getGenreCookie() {
-  const cookieValue = document.cookie
-    .split("; ")
-    .find((row) => row.startsWith("selectedGenre="))
-    ?.split("=")[1];
-  return cookieValue;
+function getGenreSession() {
+  return sessionStorage.getItem("selectedGenre");
 }
 
 // Function should return random song from the songlist.js
 function randomSongSelect() {
-  // Gathers cookie information from getGenreCookie to apply it to the selectedGenre function
-  const selectedGenre = getGenreCookie();
+  // Gathers session information from getGenreSession to apply it to the selectedGenre function
+  const selectedGenre = getGenreSession();
   if (selectedGenre) {
     // If a selectedGenre is found, filters the songs by genre
     const songFilter = songs.filter((song) => song.genre === selectedGenre);
@@ -52,7 +47,7 @@ function randomSongSelect() {
       artistAlbum.innerHTML = "<b>ALBUM: </b>" + randomSong.album;
       yearReleased.innerHTML = "<b>RELEASED IN: </b>" + randomSong.year;
       songTitle.innerHTML = randomSong.name;
-    songCover.src = randomSong.image;
+      songCover.src = randomSong.image;
     } else {
       console.log("Error!");
     }
@@ -62,7 +57,7 @@ function randomSongSelect() {
 
 // Function filters out song facts via genre and presents a random one from the list.
 function randomFactsSelect() {
-    const selectedGenre = getGenreCookie();
+    const selectedGenre = getGenreSession();
     if (selectedGenre === "Rock") {
         const decadeFilter = songFacts.filter(songFacts => songFacts.genre === "Rock");
         let songFact = decadeFilter[Math.floor(Math.random()* decadeFilter.length)];
@@ -102,4 +97,3 @@ document.addEventListener("DOMContentLoaded", function () {
     randomSongSelect();
     randomFactsSelect();
   });
-  
