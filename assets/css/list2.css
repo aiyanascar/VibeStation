@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to top left, #251631, #741974);
-    color: #b8b8e0; /* Change text color to #b8b8e0 */
+    color: #b8b8e0; 
 }
 
 
@@ -24,7 +24,7 @@ section {
 .song-box {
     display: flex; /* Use flexbox layout */
     align-items: center; /* Align items vertically */
-    width: 350px; /* Adjust width as needed */
+    width: 350px; 
     margin-right: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -32,7 +32,7 @@ section {
 }
 
 .song-box img {
-    width: 80px; /* Adjust image width as needed */
+    width: 80px; 
     margin-right: 10px; /* Add spacing between image and text */
 }
 
