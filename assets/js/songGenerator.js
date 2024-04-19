@@ -56,7 +56,7 @@ function randomSongSelect() {
 
 // Function filters out song facts via genre and presents a random one from the list.
 function randomFactsSelect() {
-    const selectedGenre = getGenreSession();
+    const selectedGenre = getGenreLocal();
     if (selectedGenre === "Rock") {
         const decadeFilter = songFacts.filter(songFacts => songFacts.genre === "Rock");
         let songFact = decadeFilter[Math.floor(Math.random()* decadeFilter.length)];
@@ -96,3 +96,5 @@ document.addEventListener("DOMContentLoaded", function () {
     randomSongSelect();
     randomFactsSelect();
   });
+
+  export {  }
