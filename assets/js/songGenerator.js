@@ -97,4 +97,4 @@ document.addEventListener("DOMContentLoaded", function () {
     randomFactsSelect();
   });
 
-  export {  }
+  export { getGenreLocal }
