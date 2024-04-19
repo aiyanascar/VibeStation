@@ -9,11 +9,10 @@ const artistAlbum = document.getElementById("artistAlbum");
 const yearReleased = document.getElementById("yearReleased");
 const genreInfo = document.getElementById("genreInfo");
 
-// Define the setGenreSession function
-function setGenreSession(genre) {
-  sessionStorage.setItem("selectedGenre", genre);
+// Define the setGenreLocal function
+function setGenreLocal(genre) {
+  localStorage.setItem("selectedGenre", genre);
 }
-
 
 document.addEventListener("DOMContentLoaded", function () {
   // Get all genre buttons
@@ -24,25 +23,25 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function () {
       var genre = this.dataset.genre;
       console.log("Selected Genre:", genre); // Check if genre value is correct
-      setGenreSession(genre);
+      setGenreLocal(genre);
     });
   });
 });
-function getGenreSession() {
-  return sessionStorage.getItem("selectedGenre");
+
+function getGenreLocal() {
+  return localStorage.getItem("selectedGenre");
 }
 
 // Function should return random song from the songlist.js
 function randomSongSelect() {
-  // Gathers session information from getGenreSession to apply it to the selectedGenre function
-  const selectedGenre = getGenreSession();
+  // Gathers local information from getGenreLocal to apply it to the selectedGenre function
+  const selectedGenre = getGenreLocal();
   if (selectedGenre) {
     // If a selectedGenre is found, filters the songs by genre
     const songFilter = songs.filter((song) => song.genre === selectedGenre);
     if (songFilter.length > 0) {
       // If there are enough songs in the randomly selected array, picks a random one using math.floor
-      let randomSong =
-        songFilter[Math.floor(Math.random() * songFilter.length)];
+      let randomSong = songFilter[Math.floor(Math.random() * songFilter.length)];
       artistName.innerHTML = "<b>ARTIST: </b>" + randomSong.artist;
       artistAlbum.innerHTML = "<b>ALBUM: </b>" + randomSong.album;
       yearReleased.innerHTML = "<b>RELEASED IN: </b>" + randomSong.year;
