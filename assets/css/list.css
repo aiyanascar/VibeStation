@@ -40,3 +40,7 @@ section {
     font-size: 14px;
     color: #b8b8e0;
 }
+
+div { 
+    display: none;
+}
