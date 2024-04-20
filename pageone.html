@@ -29,6 +29,7 @@
                 <div class="box" style="background: linear-gradient(to top left, #251631, #741974);">
                     <div class="content">
                         <h2 class="subtitle is-4 has-text-white" style="font-family: 'Electrolize', sans-serif;" id="song-title">Song Title</h2>
+                       <button class="button" id="showLyrics">Show Lyrics</button>
                         <div class="columns is-centered">
                             <div class="column is-two-thirds">
                                 <figure class="image is-square">
@@ -46,7 +47,21 @@
                 <a href="index.html" class="button is-medium custom-buttonn">GO BACK</a>
         </div>
     </section>
+    <div class="modal" id="lyricsModel">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="card">
+                <div class="card-content">
+                  <div class="content" id="card-content">
+                
+                  </div>
+                </div>
+              </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
     <script type="module" src="./assets/js/songGenerator.js"></script>
+    <script type="module" src="./assets/js/api.js"></script>
 </body>
 </html>
 

@@ -42,6 +42,7 @@ function randomSongSelect() {
     if (songFilter.length > 0) {
       // If there are enough songs in the randomly selected array, picks a random one using math.floor
       let randomSong = songFilter[Math.floor(Math.random() * songFilter.length)];
+      localStorage.setItem('generatedSong', JSON.stringify(randomSong));
       artistName.innerHTML = "<b>ARTIST: </b>" + randomSong.artist;
       artistAlbum.innerHTML = "<b>ALBUM: </b>" + randomSong.album;
       yearReleased.innerHTML = "<b>RELEASED IN: </b>" + randomSong.year;
