@@ -3,7 +3,8 @@ const clientSecret = "e6837284fb2944db9cae4225ddde1b2f";
 let token = "";
 const searchEl = document.querySelector("#search");
 const searchBtn = document.querySelector("#search-btn");
-
+const artistInfoEl = document.getElementById('show-artist-info');
+const spotifyUrlEl = document.getElementById('spotify-url');
 async function getToken() {
   const response = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
@@ -20,20 +21,15 @@ async function getToken() {
   console.log(res);
   token = res.access_token;
 }
-getToken();
-setInterval(getToken, 3600000);
-
-function handleSubmit() {
-  if (searchEl.value) {
-    let searchTerm = searchEl.value.trim();
-    searchArtist(searchTerm);
-  }
+await getToken();
+async function loadArtistInfo() {
+  await searchArtist();
 }
-
-async function searchArtist(searchTerm) {
+async function searchArtist() {
+  const generatedSong = JSON.parse(localStorage.getItem('generatedSong'));
   const response = await fetch(
     `
-        https://api.spotify.com/v1/search?q=${searchTerm}&type=artist`,
+        https://api.spotify.com/v1/search?q=${generatedSong.artist}&type=artist`,
     {
       method: "GET",
       headers: {
@@ -42,7 +38,9 @@ async function searchArtist(searchTerm) {
     }
   );
   let res = await response.json();
-  console.log(res);
+  const artistInfo = res.artists.items[0];
+  const artistProfileUrl = artistInfo.external_urls.spotify;
+  spotifyUrlEl.href = artistProfileUrl;
+  artistInfoEl.innerHTML = `<p>${JSON.stringify(artistInfo, null, 4)}</p>`;
 }
-
-searchBtn.onclick = handleSubmit;
+loadArtistInfo();
